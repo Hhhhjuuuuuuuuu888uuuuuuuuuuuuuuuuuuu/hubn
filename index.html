@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+import { Analytics } from '@vercel/analytics/next';
+ 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,5 +15,8 @@
 <body>
     <h1>HELLO!!!</h1>
     <a href="index2.html"> Press me</a>
-</body>
-</html>
+     <Analytics />
+      </body>
+    </html>
+  );
+}
